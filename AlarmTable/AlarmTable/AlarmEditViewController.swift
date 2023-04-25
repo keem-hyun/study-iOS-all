@@ -32,6 +32,7 @@ class AlarmEditViewController: UIViewController {
         guard let alarmData = alarmData else { return }
         self.delegate?.alarmDelegate(data: alarmData)
         print("저장버튼: \(alarmData)")
+        print("delegate: \(delegate!)")
         self.navigationController?.popViewController(animated: true)
     }
     

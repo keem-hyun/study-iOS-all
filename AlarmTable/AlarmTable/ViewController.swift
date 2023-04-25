@@ -11,12 +11,44 @@ class ViewController: UIViewController {
     
     var timePickerData: [String] = []
     
+    var isAlertOn = false
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "a hh:mm"
+        formatter.locale = Locale(identifier: "ko_KR")
+        let currentTime = formatter.string(from: Date())
+        
+        if isAlertOn {
+            return
+        }
+        
+        for data in timePickerData {
+            if data == currentTime {
+                self.isAlertOn = true
+                
+                Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(self.timerOn), userInfo: nil, repeats: false)
+                
+                let alert = UIAlertController(title: "알림", message: "설정된 시간입니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default) {UIAlertAction in})
+                self.present(alert, animated:true, completion: nil)
+            }
+        }
+        
+    }
+    
+    @objc func timerOn() {
+        isAlertOn = false
     }
     
     @IBAction func moveVCButton(_ sender: UIBarButtonItem) {
@@ -29,6 +61,7 @@ class ViewController: UIViewController {
 extension ViewController: AlarmDelegate {
     func alarmDelegate(data: String) {
         timePickerData.append(data)
+        self.tableView.reloadData()
     }
 }
 
@@ -41,6 +74,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmTableViewCell", for: indexPath) as! AlarmTableViewCell
         cell.AlarmTableViewCell.text = timePickerData[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
 
