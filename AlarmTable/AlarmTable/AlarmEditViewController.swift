@@ -12,6 +12,8 @@ protocol AlarmDelegate: AnyObject {
 }
 
 class AlarmEditViewController: UIViewController {
+    
+    
     @IBOutlet weak var dismissLabel: UILabel!
     weak var delegate: AlarmDelegate?
     var alarmData: String?
@@ -22,6 +24,8 @@ class AlarmEditViewController: UIViewController {
         let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissClicked))
         dismissLabel.addGestureRecognizer(dismissTapGesture)
         dismissLabel.isUserInteractionEnabled = true
+        
+        
     }
     
     @objc func dismissClicked(sender: UITapGestureRecognizer) {
@@ -42,5 +46,6 @@ class AlarmEditViewController: UIViewController {
         formatter.locale = Locale(identifier: "ko_KR")
         alarmData = formatter.string(from: sender.date)
         print("alarmData: \(alarmData!)")
+        
     }
 }

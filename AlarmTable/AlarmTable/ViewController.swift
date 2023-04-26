@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AlarmDelegate {
+    func alarmDelegate(data: String) {
+        timePickerData.append(data)
+        self.tableView.reloadData()
+    }
+    
     
     var timePickerData: [String] = []
     
@@ -58,12 +63,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: AlarmDelegate {
-    func alarmDelegate(data: String) {
-        timePickerData.append(data)
-        self.tableView.reloadData()
-    }
-}
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

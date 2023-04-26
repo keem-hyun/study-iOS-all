@@ -76,7 +76,7 @@
         <scene sceneID="D8B-1C-367">
             <objects>
                 <viewController storyboardIdentifier="AlarmEditViewController" id="W9C-HJ-7DJ" customClass="AlarmEditViewController" customModule="AlarmTable" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gAb-Bb-w70">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="gAb-Bb-w70">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -105,9 +105,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ogS-6F-ka4">
-                                <rect key="frame" x="0.0" y="236" width="393" height="182"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker autoresizesSubviews="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ogS-6F-ka4">
+                                <rect key="frame" x="0.0" y="239" width="393" height="216"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                                 <connections>
                                     <action selector="timePicker:" destination="W9C-HJ-7DJ" eventType="valueChanged" id="9Py-Q5-I8X"/>
@@ -117,8 +116,11 @@
                         <viewLayoutGuide key="safeArea" id="vno-N3-wkF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ogS-6F-ka4" firstAttribute="leading" secondItem="vno-N3-wkF" secondAttribute="leading" id="L00-xt-QeV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WEt-fn-FLn" secondAttribute="trailing" constant="10" id="ZLo-vY-lhF"/>
                             <constraint firstItem="WEt-fn-FLn" firstAttribute="top" secondItem="vno-N3-wkF" secondAttribute="top" id="ccp-2G-YeI"/>
+                            <constraint firstItem="ogS-6F-ka4" firstAttribute="top" secondItem="WEt-fn-FLn" secondAttribute="bottom" constant="150" id="gKr-g5-Xcp"/>
+                            <constraint firstItem="ogS-6F-ka4" firstAttribute="trailing" secondItem="vno-N3-wkF" secondAttribute="trailing" id="sqj-Ro-cJX"/>
                             <constraint firstItem="WEt-fn-FLn" firstAttribute="leading" secondItem="gAb-Bb-w70" secondAttribute="leadingMargin" constant="10" id="srH-DC-0aW"/>
                         </constraints>
                     </view>
