@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import Toast_Swift
 
 protocol AlarmDelegate: AnyObject {
-    func alarmDelegate(data: String)
+    func alarmDelegate(data: String, alert: Bool)
 }
 
 class AlarmEditViewController: UIViewController {
-    
     
     @IBOutlet weak var dismissLabel: UILabel!
     weak var delegate: AlarmDelegate?
@@ -33,8 +33,9 @@ class AlarmEditViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
+        
         guard let alarmData = alarmData else { return }
-        self.delegate?.alarmDelegate(data: alarmData)
+        self.delegate?.alarmDelegate(data: alarmData, alert: true)
         print("저장버튼: \(alarmData)")
         print("delegate: \(delegate!)")
         self.navigationController?.popViewController(animated: true)

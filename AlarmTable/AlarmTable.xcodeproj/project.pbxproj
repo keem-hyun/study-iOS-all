@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C375B632A06681F007FBB58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C375B622A06681F007FBB58 /* LoginViewController.swift */; };
+		9C85A1322A0DFF8B00DB800B /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9C85A1312A0DFF8B00DB800B /* KakaoSDK */; };
+		9C85A1342A0DFF8B00DB800B /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9C85A1332A0DFF8B00DB800B /* KakaoSDKAuth */; };
+		9C85A1362A0DFF8B00DB800B /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 9C85A1352A0DFF8B00DB800B /* KakaoSDKCommon */; };
+		9C85A1382A0DFF8B00DB800B /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 9C85A1372A0DFF8B00DB800B /* KakaoSDKUser */; };
+		9C85A13D2A0FAB5400DB800B /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85A13C2A0FAB5400DB800B /* DataManger.swift */; };
 		9C998C1529F66EE5009EA667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C998C1429F66EE5009EA667 /* AppDelegate.swift */; };
 		9C998C1729F66EE5009EA667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C998C1629F66EE5009EA667 /* SceneDelegate.swift */; };
 		9C998C1929F66EE5009EA667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C998C1829F66EE5009EA667 /* ViewController.swift */; };
@@ -15,9 +21,15 @@
 		9C998C2129F66EE7009EA667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C998C1F29F66EE7009EA667 /* LaunchScreen.storyboard */; };
 		9C998C2929F675AD009EA667 /* AlarmEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C998C2829F675AD009EA667 /* AlarmEditViewController.swift */; };
 		9C998C2B29F6A3A8009EA667 /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C998C2A29F6A3A8009EA667 /* AlarmTableViewCell.swift */; };
+		B81C8F3DD5A80B278CBE0E46 /* Pods_AlarmTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2299894CF0BF8BDD08FCFB9F /* Pods_AlarmTable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B797283ACFD16AE01D27CBE /* Pods-AlarmTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmTable.debug.xcconfig"; path = "Target Support Files/Pods-AlarmTable/Pods-AlarmTable.debug.xcconfig"; sourceTree = "<group>"; };
+		2299894CF0BF8BDD08FCFB9F /* Pods_AlarmTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F41A42FD78B7E68FEB4DE6 /* Pods-AlarmTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmTable.release.xcconfig"; path = "Target Support Files/Pods-AlarmTable/Pods-AlarmTable.release.xcconfig"; sourceTree = "<group>"; };
+		9C375B622A06681F007FBB58 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9C85A13C2A0FAB5400DB800B /* DataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
 		9C998C1129F66EE5009EA667 /* AlarmTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C998C1429F66EE5009EA667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C998C1629F66EE5009EA667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +47,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C85A1362A0DFF8B00DB800B /* KakaoSDKCommon in Frameworks */,
+				B81C8F3DD5A80B278CBE0E46 /* Pods_AlarmTable.framework in Frameworks */,
+				9C85A1322A0DFF8B00DB800B /* KakaoSDK in Frameworks */,
+				9C85A1382A0DFF8B00DB800B /* KakaoSDKUser in Frameworks */,
+				9C85A1342A0DFF8B00DB800B /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17323F55301A394D45C8BEEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2299894CF0BF8BDD08FCFB9F /* Pods_AlarmTable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52B004A66C5117917B16D5A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B797283ACFD16AE01D27CBE /* Pods-AlarmTable.debug.xcconfig */,
+				96F41A42FD78B7E68FEB4DE6 /* Pods-AlarmTable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C85A1392A0FAB0700DB800B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C85A13C2A0FAB5400DB800B /* DataManger.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C85A13A2A0FAB0F00DB800B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C998C2A29F6A3A8009EA667 /* AlarmTableViewCell.swift */,
+				9C998C1A29F66EE5009EA667 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C85A13B2A0FAB1700DB800B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C998C1829F66EE5009EA667 /* ViewController.swift */,
+				9C375B622A06681F007FBB58 /* LoginViewController.swift */,
+				9C998C2829F675AD009EA667 /* AlarmEditViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		9C998C0829F66EE5009EA667 = {
 			isa = PBXGroup;
 			children = (
 				9C998C1329F66EE5009EA667 /* AlarmTable */,
 				9C998C1229F66EE5009EA667 /* Products */,
+				52B004A66C5117917B16D5A1 /* Pods */,
+				17323F55301A394D45C8BEEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +125,9 @@
 			children = (
 				9C998C1429F66EE5009EA667 /* AppDelegate.swift */,
 				9C998C1629F66EE5009EA667 /* SceneDelegate.swift */,
-				9C998C1829F66EE5009EA667 /* ViewController.swift */,
-				9C998C2829F675AD009EA667 /* AlarmEditViewController.swift */,
-				9C998C1A29F66EE5009EA667 /* Main.storyboard */,
-				9C998C2A29F6A3A8009EA667 /* AlarmTableViewCell.swift */,
+				9C85A1392A0FAB0700DB800B /* Models */,
+				9C85A13A2A0FAB0F00DB800B /* Views */,
+				9C85A13B2A0FAB1700DB800B /* Controllers */,
 				9C998C1D29F66EE7009EA667 /* Assets.xcassets */,
 				9C998C1F29F66EE7009EA667 /* LaunchScreen.storyboard */,
 				9C998C2229F66EE7009EA667 /* Info.plist */,
@@ -80,15 +142,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C998C2529F66EE7009EA667 /* Build configuration list for PBXNativeTarget "AlarmTable" */;
 			buildPhases = (
+				EF197F4E4674E90CB7895269 /* [CP] Check Pods Manifest.lock */,
 				9C998C0D29F66EE5009EA667 /* Sources */,
 				9C998C0E29F66EE5009EA667 /* Frameworks */,
 				9C998C0F29F66EE5009EA667 /* Resources */,
+				F6D2590BB7340C41EDDE469E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AlarmTable;
+			packageProductDependencies = (
+				9C85A1312A0DFF8B00DB800B /* KakaoSDK */,
+				9C85A1332A0DFF8B00DB800B /* KakaoSDKAuth */,
+				9C85A1352A0DFF8B00DB800B /* KakaoSDKCommon */,
+				9C85A1372A0DFF8B00DB800B /* KakaoSDKUser */,
+			);
 			productName = AlarmTable;
 			productReference = 9C998C1129F66EE5009EA667 /* AlarmTable.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 9C998C0829F66EE5009EA667;
+			packageReferences = (
+				9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+			);
 			productRefGroup = 9C998C1229F66EE5009EA667 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,15 +212,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EF197F4E4674E90CB7895269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlarmTable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D2590BB7340C41EDDE469E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlarmTable/Pods-AlarmTable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlarmTable/Pods-AlarmTable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlarmTable/Pods-AlarmTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C998C0D29F66EE5009EA667 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C375B632A06681F007FBB58 /* LoginViewController.swift in Sources */,
 				9C998C2B29F6A3A8009EA667 /* AlarmTableViewCell.swift in Sources */,
 				9C998C1929F66EE5009EA667 /* ViewController.swift in Sources */,
 				9C998C1529F66EE5009EA667 /* AppDelegate.swift in Sources */,
 				9C998C2929F675AD009EA667 /* AlarmEditViewController.swift in Sources */,
+				9C85A13D2A0FAB5400DB800B /* DataManger.swift in Sources */,
 				9C998C1729F66EE5009EA667 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +407,7 @@
 		};
 		9C998C2629F66EE7009EA667 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B797283ACFD16AE01D27CBE /* Pods-AlarmTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,6 +438,7 @@
 		};
 		9C998C2729F66EE7009EA667 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96F41A42FD78B7E68FEB4DE6 /* Pods-AlarmTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +489,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C85A1312A0DFF8B00DB800B /* KakaoSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDK;
+		};
+		9C85A1332A0DFF8B00DB800B /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		9C85A1352A0DFF8B00DB800B /* KakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKCommon;
+		};
+		9C85A1372A0DFF8B00DB800B /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C85A1302A0DFF8B00DB800B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C998C0929F66EE5009EA667 /* Project object */;
 }

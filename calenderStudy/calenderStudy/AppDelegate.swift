@@ -1,13 +1,11 @@
 //
 //  AppDelegate.swift
-//  AlarmTable
+//  calenderStudy
 //
-//  Created by 김강현 on 2023/04/24.
+//  Created by 김강현 on 2023/05/28.
 //
 
 import UIKit
-import KakaoSDKCommon
-import KakaoSDKUser
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        KakaoSDK.initSDK(appKey: "abff93b3e8e6fcc611277ae63e960a0b")
         return true
     }
 

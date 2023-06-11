@@ -1,0 +1,6 @@
+framework module Pods_AlarmTable {
+  umbrella header "Pods-AlarmTable-umbrella.h"
+
+  export *
+  module * { export * }
+}
